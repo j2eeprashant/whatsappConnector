@@ -137,3 +137,12 @@ This is a full-stack WhatsApp Business messaging application built with a modern
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+<img width="1439" alt="Screenshot 2025-06-26 at 6 41 07 PM" src="https://github.com/user-attachments/assets/694e0042-1d3f-40e8-b353-6e61124d15f8" />
+<img width="1439" alt="Screenshot 2025-06-26 at 6 41 07 PM" src="https://github.com/user-attachments/assets/694e0042-1d3f-40e8-b353-6e61124d15f8" />
+<img width="1439" alt="Screenshot 2025-06-26 at 6 41 52 PM" src="https://github.com/user-attachments/assets/24ed4eac-1e58-4454-9c01-901541c41037" />
+<img width="1439" alt="Screenshot 2025-06-26 at 6 41 52 PM" src="https://github.com/user-attachments/assets/24ed4eac-1e58-4454-9c01-901541c41037" />
+
+
+
+
