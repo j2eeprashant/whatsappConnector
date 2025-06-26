@@ -1,5 +1,6 @@
 import { MessageSquare, Settings, Circle } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "wouter";
 import MessageComposer from "@/components/message-composer";
 import ContactManager from "@/components/contact-manager";
 import MessageHistory from "@/components/message-history";
@@ -32,9 +33,11 @@ export default function Dashboard() {
                 <Circle className={`h-3 w-3 ${whatsappStatus?.connected ? 'text-green-400 fill-green-400' : 'text-red-400 fill-red-400'}`} />
                 <span>{whatsappStatus?.connected ? 'Connected to WhatsApp Web' : 'Disconnected from WhatsApp Web'}</span>
               </div>
-              <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
-                <Settings className="h-5 w-5" />
-              </button>
+              <Link href="/settings">
+                <button className="p-2 text-gray-400 hover:text-gray-600 transition-colors">
+                  <Settings className="h-5 w-5" />
+                </button>
+              </Link>
             </div>
           </div>
         </div>

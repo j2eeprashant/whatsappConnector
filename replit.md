@@ -110,6 +110,29 @@ This is a full-stack WhatsApp Business messaging application built with a modern
 
 ## Changelog
 - June 26, 2025. Initial setup
+- June 26, 2025. Added Settings page with WhatsApp Web QR code connection interface
+- June 26, 2025. Implemented graceful handling of browser dependency issues in demo mode
+
+## Recent Changes
+
+### Settings Page Implementation
+- Created dedicated settings page at `/settings` route
+- Added WhatsApp Web connection management interface
+- Implemented QR code display functionality for browser-based WhatsApp Web linking
+- Added system status monitoring and feature overview
+- Integrated navigation between dashboard and settings
+
+### WhatsApp Service Improvements
+- Enhanced error handling for missing browser dependencies
+- Added demo mode operation when Chrome/Chromium dependencies unavailable
+- Implemented reconnection functionality for WhatsApp Web sessions
+- Added proper TypeScript interfaces for status responses
+
+### User Interface Enhancements
+- Added functional settings button in main dashboard header
+- Implemented responsive design for settings page
+- Added clear instructions for WhatsApp Web connection process
+- Enhanced error messaging for better user experience
 
 ## User Preferences
 

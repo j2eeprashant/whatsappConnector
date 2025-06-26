@@ -209,6 +209,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // WhatsApp reconnect route
+  app.post("/api/whatsapp/reconnect", async (req, res) => {
+    try {
+      await whatsAppService.reconnect();
+      res.json({ success: true, message: "Reconnection initiated" });
+    } catch (error) {
+      res.status(500).json({ error: "Failed to reconnect to WhatsApp" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }

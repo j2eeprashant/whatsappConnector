@@ -73,6 +73,15 @@ export class WhatsAppService {
     return { connected: this.isConnected };
   }
 
+  async reconnect(): Promise<void> {
+    console.log('Attempting to reconnect to WhatsApp Web...');
+    this.isConnected = false;
+    this.initializationFailed = false;
+    
+    // Re-attempt initialization
+    await this.initialize();
+  }
+
   async close(): Promise<void> {
     // Clean up any resources if needed
     this.isConnected = false;
