@@ -7,8 +7,10 @@ import { insertContactSchema, insertMessageSchema, insertScheduledMessageSchema 
 import { z } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Initialize WhatsApp service
-  await whatsAppService.initialize();
+  // Initialize WhatsApp service asynchronously (don't block server startup)
+  whatsAppService.initialize().catch(error => {
+    console.log('WhatsApp service will run in demo mode:', error.message);
+  });
   schedulerService.start();
 
   // Contact routes

@@ -7,13 +7,26 @@ import MessageHistory from "@/components/message-history";
 import ScheduledMessages from "@/components/scheduled-messages";
 import SystemStatus from "@/components/system-status";
 
+interface WhatsAppStatus {
+  connected: boolean;
+  qrCode?: string;
+}
+
+interface MessageStats {
+  sent: number;
+  delivered: number;
+  failed: number;
+  pending: number;
+  totalContacts: number;
+}
+
 export default function Dashboard() {
-  const { data: whatsappStatus } = useQuery({
+  const { data: whatsappStatus } = useQuery<WhatsAppStatus>({
     queryKey: ["/api/whatsapp/status"],
     refetchInterval: 10000, // Check status every 10 seconds
   });
 
-  const { data: stats } = useQuery({
+  const { data: stats } = useQuery<MessageStats>({
     queryKey: ["/api/messages/stats"],
     refetchInterval: 5000, // Update stats every 5 seconds
   });
